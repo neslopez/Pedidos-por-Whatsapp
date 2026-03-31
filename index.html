@@ -6,122 +6,153 @@
 <title>Pedidos por WhatsApp</title>
 
 <style>
-    body {
-        font-family: Arial, sans-serif;
-        background: #f5f5f5;
-        margin: 0;
-        padding: 20px;
-    }
+body {
+    font-family: Arial, sans-serif;
+    background: #f5f5f5;
+    margin: 0;
+    padding: 20px;
+}
 
-    h1 {
-        text-align: center;
-        color: #333;
-    }
+h1 {
+    text-align: center;
+    color: #333;
+}
 
-    .container {
-        max-width: 500px;
-        margin: auto;
-        background: white;
-        padding: 20px;
-        border-radius: 10px;
-    }
+.container {
+    max-width: 500px;
+    margin: auto;
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+}
 
-    .producto {
-        margin: 10px 0;
-        padding: 10px;
-        border-bottom: 1px solid #ddd;
-    }
+.producto {
+    margin: 10px 0;
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+}
 
-    button {
-        width: 100%;
-        padding: 15px;
-        background: green;
-        color: white;
-        font-size: 18px;
-        border: none;
-        border-radius: 10px;
-        margin-top: 20px;
-        cursor: pointer;
-    }
+.total {
+    font-size: 20px;
+    font-weight: bold;
+    margin-top: 15px;
+    color: green;
+}
 
-    input {
-        width: 100%;
-        padding: 10px;
-        margin-top: 10px;
-    }
+button {
+    width: 100%;
+    padding: 15px;
+    background: green;
+    color: white;
+    font-size: 18px;
+    border: none;
+    border-radius: 10px;
+    margin-top: 20px;
+    cursor: pointer;
+}
+
+input {
+    width: 100%;
+    padding: 10px;
+    margin-top: 10px;
+}
 </style>
 </head>
 
 <body>
 
 <div class="container">
-    <h1>Hacer Pedido</h1>
+<h1>Hacer Pedido</h1>
 
-    <h2>🔥 Combos</h2>
+<h2>🔥 Combos</h2>
 
-<div class="producto"><input type="checkbox" data-precio="15000"> Salame de campo + queso Mar del Plata - $15.000</div>
-<div class="producto"><input type="checkbox" data-precio="20000"> 2 salames de campo + queso Mar del Plata - $20.000</div>
-<div class="producto"><input type="checkbox" data-precio="10000"> Salame chico + queso Mar del Plata - $10.000</div>
-<div class="producto"><input type="checkbox" data-precio="10000"> Salamin Criollo + queso Mar del Plata - $10.000</div>
-<div class="producto"><input type="checkbox" data-precio="12000"> 2 salamines Criollo + queso Mar del Plata- $12.000</div>
-<div class="producto"><input type="checkbox" data-precio="15000"> 3 salamines Criollo + queso Mar del Plata - $15.000</div>
-<div class="producto"><input type="checkbox" data-precio="12000"> Longaniza + queso Mar del Plata - $12.000</div>
-<div class="producto"><input type="checkbox" data-precio="18000"> Salame de campo + salamin Criollo + queso - $18.000</div>
-<div class="producto"><input type="checkbox" data-precio="20000"> Salame de campo + longaniza + queso - $20.000</div>
-<div class="producto"><input type="checkbox" data-precio="15000"> Mortadela bocha + queso Mar del Plata - $15.000</div>
-<div class="producto"><input type="checkbox" data-precio="20000"> Salame de campo + mortadela bocha + queso - $20.000</div>
+<div class="producto"><input type="checkbox" data-precio="15000" value="Salame de campo + queso Mar del Plata"> Salame de campo + queso Mar del Plata - $15.000</div>
+<div class="producto"><input type="checkbox" data-precio="20000" value="2 salames de campo + queso Mar del Plata"> 2 salames de campo + queso Mar del Plata - $20.000</div>
+<div class="producto"><input type="checkbox" data-precio="10000" value="Salame chico + queso Mar del Plata"> Salame chico + queso Mar del Plata - $10.000</div>
+<div class="producto"><input type="checkbox" data-precio="10000" value="Salamin Criollo + queso Mar del Plata"> Salamin Criollo + queso Mar del Plata - $10.000</div>
+<div class="producto"><input type="checkbox" data-precio="12000" value="2 salamines Criollo + queso Mar del Plata"> 2 salamines Criollo + queso Mar del Plata - $12.000</div>
+<div class="producto"><input type="checkbox" data-precio="15000" value="3 salamines Criollo + queso Mar del Plata"> 3 salamines Criollo + queso Mar del Plata - $15.000</div>
+<div class="producto"><input type="checkbox" data-precio="12000" value="Longaniza + queso Mar del Plata"> Longaniza + queso Mar del Plata - $12.000</div>
+<div class="producto"><input type="checkbox" data-precio="18000" value="Salame de campo + salamin Criollo + queso"> Salame de campo + salamin Criollo + queso - $18.000</div>
+<div class="producto"><input type="checkbox" data-precio="20000" value="Salame de campo + longaniza + queso"> Salame de campo + longaniza + queso - $20.000</div>
+<div class="producto"><input type="checkbox" data-precio="15000" value="Mortadela bocha + queso Mar del Plata"> Mortadela bocha + queso Mar del Plata - $15.000</div>
+<div class="producto"><input type="checkbox" data-precio="20000" value="Salame de campo + mortadela bocha + queso"> Salame de campo + mortadela bocha + queso - $20.000</div>
 
 <h2>🥩 Fiambres</h2>
 
-<div class="producto"><input type="checkbox" data-precio="10000"> Salame de campo - $10.000</div>
-<div class="producto"><input type="checkbox" data-precio="18000"> 2 salames de campo - $18.000</div>
-<div class="producto"><input type="checkbox" data-precio="10000"> Mortadela bocha - $10.000</div>
-<div class="producto"><input type="checkbox" data-precio="18000"> Mortadela + salame - $18.000</div>
-<div class="producto"><input type="checkbox" data-precio="5000"> Salamin criollo - $5.000</div>
-<div class="producto"><input type="checkbox" data-precio="8000"> 2 salamines criollos - $8.000</div>
-<div class="producto"><input type="checkbox" data-precio="12000"> 3 salamines criollos - $12.000</div>
-<div class="producto"><input type="checkbox" data-precio="8000"> Longaniza - $8.000</div>
-<div class="producto"><input type="checkbox" data-precio="15000"> 2 longanizas - $15.000</div>
+<div class="producto"><input type="checkbox" data-precio="10000" value="Salame de campo"> Salame de campo - $10.000</div>
+<div class="producto"><input type="checkbox" data-precio="18000" value="2 salames de campo"> 2 salames de campo - $18.000</div>
+<div class="producto"><input type="checkbox" data-precio="10000" value="Mortadela bocha"> Mortadela bocha - $10.000</div>
+<div class="producto"><input type="checkbox" data-precio="18000" value="Mortadela + salame"> Mortadela + salame - $18.000</div>
+<div class="producto"><input type="checkbox" data-precio="5000" value="Salamin criollo"> Salamin criollo - $5.000</div>
+<div class="producto"><input type="checkbox" data-precio="8000" value="2 salamines criollos"> 2 salamines criollos - $8.000</div>
+<div class="producto"><input type="checkbox" data-precio="12000" value="3 salamines criollos"> 3 salamines criollos - $12.000</div>
+<div class="producto"><input type="checkbox" data-precio="8000" value="Longaniza"> Longaniza - $8.000</div>
+<div class="producto"><input type="checkbox" data-precio="15000" value="2 longanizas"> 2 longanizas - $15.000</div>
 
 <h2>🧀 Quesos</h2>
 
-<div class="producto"><input type="checkbox" data-precio="5000"> 1 porción queso - $5.000</div>
-<div class="producto"><input type="checkbox" data-precio="9000"> 2 porciones queso - $9.000</div>
-<div class="producto"><input type="checkbox" data-precio="8000"> Queso saborizado - $8.000</div>
+<div class="producto"><input type="checkbox" data-precio="5000" value="1 porción queso"> 1 porción queso - $5.000</div>
+<div class="producto"><input type="checkbox" data-precio="9000" value="2 porciones queso"> 2 porciones queso - $9.000</div>
+<div class="producto"><input type="checkbox" data-precio="8000" value="Queso saborizado"> Queso saborizado - $8.000</div>
 
 <h2>💎 Premium</h2>
 
-<div class="producto"><input type="checkbox" data-precio="20000"> Salame XXL - $20.000</div>
-<div class="producto"><input type="checkbox" data-precio="25000"> Salame XXL + 2 quesos - $25.000</div>
-<div class="producto"><input type="checkbox" data-precio="25000"> Salame XXL + queso saborizado - $25.000</div>
+<div class="producto"><input type="checkbox" data-precio="20000" value="Salame XXL"> Salame XXL - $20.000</div>
+<div class="producto"><input type="checkbox" data-precio="25000" value="Salame XXL + 2 quesos"> Salame XXL + 2 quesos - $25.000</div>
+<div class="producto"><input type="checkbox" data-precio="25000" value="Salame XXL + queso saborizado"> Salame XXL + queso saborizado - $25.000</div>
 
-    <h2>📍 Tus datos</h2>
+<div class="total" id="total">Total: $0</div>
 
-    <input type="text" id="nombre" placeholder="Tu nombre">
-    <input type="text" id="direccion" placeholder="Dirección">
-    <input type="text" id="pago" placeholder="Forma de pago">
+<h2>📍 Tus datos</h2>
 
-    <button onclick="enviarPedido()">Enviar por WhatsApp</button>
+<input type="text" id="nombre" placeholder="Tu nombre">
+<input type="text" id="direccion" placeholder="Dirección">
+<input type="text" id="pago" placeholder="Forma de pago">
+
+<button onclick="enviarPedido()">Enviar por WhatsApp</button>
 </div>
 
 <script>
-function enviarPedido() {
-    let productos = document.querySelectorAll('input[type=checkbox]:checked');
-    let mensaje = "Hola! Quiero hacer un pedido:%0A";
+let checkboxes = document.querySelectorAll("input[type=checkbox]");
 
-    productos.forEach(p => {
-        mensaje += "- " + p.value + "%0A";
+checkboxes.forEach(cb => {
+    cb.addEventListener("change", calcularTotal);
+});
+
+function calcularTotal() {
+    let total = 0;
+
+    checkboxes.forEach(cb => {
+        if (cb.checked) {
+            total += parseInt(cb.dataset.precio);
+        }
+    });
+
+    document.getElementById("total").innerText = "Total: $" + total;
+}
+
+function enviarPedido() {
+    let mensaje = "Hola! Quiero hacer un pedido:%0A";
+    let total = 0;
+
+    checkboxes.forEach(cb => {
+        if (cb.checked) {
+            mensaje += "- " + cb.value + "%0A";
+            total += parseInt(cb.dataset.precio);
+        }
     });
 
     let nombre = document.getElementById("nombre").value;
     let direccion = document.getElementById("direccion").value;
     let pago = document.getElementById("pago").value;
 
+    mensaje += "%0A Total: $" + total;
     mensaje += "%0A Nombre: " + nombre;
     mensaje += "%0A Dirección: " + direccion;
     mensaje += "%0A Pago: " + pago;
 
-    let telefono = "5491165679163"; // ← CAMBIAR POR EL NÚMERO DEL CLIENTE
+    let telefono = "5491165679163";
 
     let url = "https://wa.me/" + telefono + "?text=" + mensaje;
 
